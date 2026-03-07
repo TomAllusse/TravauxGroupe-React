@@ -35,7 +35,7 @@ const Themes = () => {
 
     const handleChange = (event) => {
         const value = event.target.value;
-        setSelectedTheme(value); // On met à jour l'état en direct
+        setSelectedTheme(value);
         console.log("ID sélectionné :", value);
     };
 
