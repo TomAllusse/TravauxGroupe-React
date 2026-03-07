@@ -1,69 +1,59 @@
 import Header from "../components/Header";
 import '../App.css'
-import { useState} from "react";
+import {useEffect, useState} from "react";
+import { useNavigate, useSearchParams } from 'react-router';
 
 const Themes = () => {
 
-    const [selectId, setSelectedId] = useState("");
-    const [questions, setQuestions] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [selectedTheme, setSelectedTheme] = useState("");
+    const [themes, setThemes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    const categories = [
-        { name: "Animals", id: 27 },
-        { name: "General Knowledge", id: 9 },
-        { name: "History", id: 23},
-        { name: "Science:Computers", id: 18}
-    ];
+    /* Niveau et Navigation */
+    const [searchParams] = useSearchParams();
+    const niveau = searchParams.get('niv');
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        const fetchThemes = async () => {
+            try {
+                const response = await fetch("https://opentdb.com/api_category.php");
+                const data = await response.json();
+                if (data.trivia_categories) {
+                    setThemes(data.trivia_categories);
+                    console.log("Thèmes trouvés");
+                }
+            }catch (error){
+                console.error("Erreur lors du fetch :" ,error);
 
-
-    const fetchQuiz = async (id) => {
-        if (!id) return;
-
-        setLoading(true);
-        try {
-            const response = await fetch("https://opentdb.com/api_category.php");
-            const data = await response.json();
-
-        setQuestions(data.results);
-            console.log("Questions chargées :", data.results);
-        }catch (error){
-            console.error("Erreur lors du fetch :" ,error);
-
-        }finally {
-            setLoading(false);
-        }
-
-
-    };
-
-
+            }finally {
+                setLoading(false);
+            }
+        };
+        fetchThemes();
+    }, []);
 
     const handleChange = (event) => {
-        const id = event.target.value;
-        setSelectedId(id);
-        console.log("ID sélectionné :", id);
-
-        fetchQuiz(id);
+        const value = event.target.value;
+        setSelectedTheme(value); // On met à jour l'état en direct
+        console.log("ID sélectionné :", value);
     };
+
+    if (loading) return <p>Préparation des thèmes ...</p>;
 
     return (
         <>
             <Header/>
             <h1 className="titleIndex">Choississez un Thème !</h1>
-            <select
-                id="category-select"
-                value={selectId}
-                onChange={handleChange}
-            >
+            <select name="theme" id="theme-select" value={selectedTheme} onChange={handleChange} >
                 <option value="" disabled>=====THEME=====</option>
-                {categories.map((cat) => (
-                    <option key={cat.id} value={cat.id}>
-                        {cat.name}
-                    </option>
-                ))}
+                {
+                    themes.map((theme) =>
+                        <option key={theme.id} value={theme.id} dangerouslySetInnerHTML={{ __html: theme.name }}/>
+                    )
+                }
             </select>
-
+            <button onClick={() => navigate(`/quizz?niv=${niveau}&themes=${selectedTheme}`)} className="btn-start" disabled={!selectedTheme}>Démarrer</button>
         </>
     );
 };

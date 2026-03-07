@@ -8,9 +8,9 @@ const Index = () => {
       <h1 className="titleIndex">BIENVENUE</h1>
       <h2>NIVEAU</h2>
       <ul>
-        <li><a href="">Easy</a></li>
-        <li><a href="">Medium</a></li>
-        <li><a href="">Difficult</a></li>
+        <li><a href="/themes?niv=easy">Easy</a></li>
+        <li><a href="/themes?niv=medium">Medium</a></li>
+        <li><a href="/themes?niv=hard">Hard</a></li>
       </ul>
     </>
   );

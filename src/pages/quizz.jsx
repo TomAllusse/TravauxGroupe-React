@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {useNavigate} from "react-router";
+import {useNavigate, useSearchParams} from "react-router";
 
 const Quizz = () => {
     const [questions, setQuestions] = useState([]);
@@ -9,12 +9,18 @@ const Quizz = () => {
     const [score, setScore] = useState(0);
     const [userChoice, setUserChoice] = useState(null);
 
+    /* Niveau et Navigation */
+    const [searchParams] = useSearchParams();
+    const niveau = searchParams.get('niv');
+    const themes = searchParams.get('themes');
+    const navigate = useNavigate();
+
     const shuffleArray = (array) => [...array].sort(() => Math.random() - 0.5);
 
     useEffect(() => {
         const fetchQuiz = async () => {
             try {
-                const response = await fetch("https://opentdb.com/api.php?amount=10&category=27&difficulty=easy&type=multiple");
+                const response = await fetch(`https://opentdb.com/api.php?amount=10&category=${themes}&difficulty=${niveau}&type=multiple`);
                 const data = await response.json();
                 if (data.results) {
                     const formatted = data.results.map(q => ({
@@ -58,11 +64,10 @@ const Quizz = () => {
     }, [questions, currentIndex, userChoice]);
 
     const finishQuiz = () => {
-        const navigate = useNavigate();
 
         setTimeout(() => {
-            navigate('/finish');
-        }, 10000);
+            navigate('/menu');
+        }, 5000);
     };
 
     if (loading) return <p>Préparation du quizz ...</p>;
@@ -84,13 +89,13 @@ const Quizz = () => {
         <div className="quizz-container">
             <div className="question">
                 <h1>Question {currentIndex + 1} / {questions.length} | Score: {score}</h1>
-                <h2> {currentQuestion.question}</h2>
+                <h2 dangerouslySetInnerHTML={{ __html: currentQuestion.question }} />
 
                 <div className="options">
                     {currentQuestion.all_answers.map((answer, i) => (
                         <div key={i}>
                             <input type="radio" id={"response-" + i} name="quizz-choice" value={answer} checked={userChoice === answer} onChange={() => setUserChoice(answer)}/>
-                            <label htmlFor={"response-" + i}>{answer}</label>
+                            <label htmlFor={"response-" + i} dangerouslySetInnerHTML={{ __html: answer }}/>
                         </div>
                     ))}
                 </div>

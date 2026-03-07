@@ -11,10 +11,6 @@ const Header = () => {
       pathname: "/",
       text: "Accueil",
     },
-   // {
-//pathname: "/themes",
-//text: "Themes",
-    //},
     {
       pathname: "/quizz",
       text: "Quizz",
