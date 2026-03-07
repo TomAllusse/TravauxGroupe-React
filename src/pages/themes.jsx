@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import '../App.css'
+import '../css/themes.css'
 import {useEffect, useState} from "react";
 import { useNavigate, useSearchParams } from 'react-router';
 
@@ -15,6 +16,15 @@ const Themes = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        document.body.style.backgroundColor = '#edf0f2';
+
+        return () => {
+            document.body.style.backgroundColor = null;
+        };
+    }, []);
+
+    useEffect(() => {
+
         const fetchThemes = async () => {
             try {
                 const response = await fetch("https://opentdb.com/api_category.php");

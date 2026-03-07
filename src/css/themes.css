@@ -1,0 +1,41 @@
+#theme-select {
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    margin: 100px 150px;
+    cursor: pointer;
+    background: #00c4cc;
+    color: #000;
+    text-align: center;
+    border-radius: 15px;
+    border: 7px double #00c4cc;
+}
+
+#theme-select:open, #theme-select:hover {
+    background: #000;
+    color: #00c4cc;
+}
+
+#theme-select:open {
+    border-radius: 15px 15px 0 0;
+}
+
+.btn-start{
+    width: 250px;
+    height: 40px;
+    text-transform: uppercase;
+    list-style: none;
+    text-align: center;
+    background: #00c4cc;
+    border: 2px solid #00c4cc;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #000;
+    align-content: center;
+}
+
+.btn-start:hover {
+    color: #00c4cc;
+    background: #000;
+    border-radius: 15px;
+}

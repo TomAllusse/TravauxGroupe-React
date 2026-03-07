@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import {useNavigate, useSearchParams} from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
+
+import '../css/quizz.css';
 
 const Quizz = () => {
     const [questions, setQuestions] = useState([]);
@@ -14,6 +16,14 @@ const Quizz = () => {
     const niveau = searchParams.get('niv');
     const themes = searchParams.get('themes');
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.body.style.backgroundColor = '#00c4cc';
+
+        return () => {
+            document.body.style.backgroundColor = null;
+        };
+    }, []);
 
     const shuffleArray = (array) => [...array].sort(() => Math.random() - 0.5);
 
@@ -66,6 +76,7 @@ const Quizz = () => {
     const finishQuiz = () => {
 
         setTimeout(() => {
+            document.body.style.backgroundColor = null;
             navigate('/menu');
         }, 5000);
     };
@@ -73,36 +84,61 @@ const Quizz = () => {
     if (loading) return <p>Préparation du quizz ...</p>;
 
     if (currentIndex >= questions.length) {
+        document.body.style.backgroundColor = '#00c4cc';
+
         return (
             <div className="quizz-container">
-                <h1>Quizz terminé ! Bravo.</h1>
-                <p>Score : {score} / {questions.length}</p>
-                <p className="status-message">{score > 7 ? "Bravo !" : score > 4 ? "Ça commence à venir" : "Pas génial là !"} </p>
+                <h1 className="titleIndex">Quizz terminé ! Bravo.</h1>
+                <p className="score-status">Score : {score} / {questions.length}</p>
+                <p className="message-status">{score > 7 ? "Bravo !" : score > 4 ? "Ça commence à venir" : "Pas génial là !"} </p>
                 {finishQuiz()}
             </div>
         );
     }
 
+    export  const sauvegardeScore = (pseudo, scorefinal) => {
+
+        const sauvegarde = localStorage.getItem("hallOfFame");
+
+        let listeScores;
+        if (sauvegarde){
+            listeScores = JSON.parse(sauvegarde);
+        } else {
+            listeScores = []
+        }
+        const nouvelEntree ={
+            id: Date.now(),
+            nom: pseudo,
+            score: scorefinal
+        };
+
+        listeScores.push(nouvelEntree);
+
+        listeScores.sort((a,b) => b.score - a.score)
+
+        const top10 = listeScores.slice(0, 10);
+
+        localStorage.setItem("hallOfFame", JSON.stringify(top10));
+    }
+
     const currentQuestion = questions[currentIndex];
 
     return (
-        <div className="quizz-container">
-            <div className="question">
-                <h1>Question {currentIndex + 1} / {questions.length} | Score: {score}</h1>
-                <h2 dangerouslySetInnerHTML={{ __html: currentQuestion.question }} />
+        <>
+           <h1 className="titleIndex">Question {currentIndex + 1} / {questions.length} | Score: {score}</h1>
+           <h2 className="titleSecond" dangerouslySetInnerHTML={{ __html: currentQuestion.question }} />
 
-                <div className="options">
-                    {currentQuestion.all_answers.map((answer, i) => (
-                        <div key={i}>
-                            <input type="radio" id={"response-" + i} name="quizz-choice" value={answer} checked={userChoice === answer} onChange={() => setUserChoice(answer)}/>
-                            <label htmlFor={"response-" + i} dangerouslySetInnerHTML={{ __html: answer }}/>
-                        </div>
-                    ))}
-                </div>
+           <div className="options">
+               {currentQuestion.all_answers.map((answer, i) => (
+                   <div key={i}>
+                       <input type="radio" id={"response-" + i} name="quizz-choice" value={answer} checked={userChoice === answer} onChange={() => setUserChoice(answer)}/>
+                       <label htmlFor={"response-" + i} dangerouslySetInnerHTML={{ __html: answer }}/>
+                   </div>
+               ))}
+           </div>
 
-                <p>Prochaine question dans {timeLeft} secondes...</p>
-            </div>
-        </div>
+           <p id="timer-message">Prochaine question dans {timeLeft} secondes...</p>
+        </>
     );
 };
 

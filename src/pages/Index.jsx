@@ -1,19 +1,18 @@
-import Header from "../components/Header";
 import '../App.css'
+import '../css/index.css'
 
 const Index = () => {
-  return (
-    <>
-      <Header/>
-      <h1 className="titleIndex">BIENVENUE</h1>
-      <h2>NIVEAU</h2>
-      <ul>
-        <li><a href="/themes?niv=easy">Easy</a></li>
-        <li><a href="/themes?niv=medium">Medium</a></li>
-        <li><a href="/themes?niv=hard">Hard</a></li>
-      </ul>
-    </>
-  );
+    return (
+        <>
+        <h1 className="titleIndex">BIENVENUE</h1>
+        <h2 className="titleSecond">NIVEAU</h2>
+        <ul className="niv-ul">
+            <li className="niv-li"><a className="link" href="/themes?niv=easy">Easy</a></li>
+            <li className="niv-li"><a className="link" href="/themes?niv=medium">Medium</a></li>
+            <li className="niv-li"><a className="link" href="/themes?niv=hard">Hard</a></li>
+        </ul>
+        </>
+    );
 };
 
 export default Index;

@@ -1,8 +1,8 @@
 nav {
     display: block;
     margin: auto;
-    position: relative;
-    height: 70px;
+    position: fixed;
+    height: 100px;
     width: 100%;
 }
 
@@ -13,15 +13,16 @@ nav ul {
 .item-nav {
     display: inline-block;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .item-nav {
     text-decoration: none;
     width: max-content;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 5px 0;
     margin: 0 20px;
+    color: #646cff;
 }
 
 
@@ -32,6 +33,7 @@ nav ul {
     margin: 0;
     height: 100%;
     align-items: center;
+    color: #646cff;
 }
 
 .list-nav li {
@@ -41,14 +43,14 @@ nav ul {
 
 .link-nav {
     text-decoration: none;
-    color: #fff;
+    color: #00c4cc;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0s ease-out;
     cursor : pointer;
 }
 
 .link-nav:hover{
-    border-color: #475465;
+    border-color: #00c4cc;
     border-style: solid;
     border-top-width: 0;
     border-left-width: 0;

@@ -1,12 +1,12 @@
 const Menu = () => {
     return (
-        <div>
+        <>
             <h1 className="titleIndex">MENU</h1>
-            <ul>
-                <li><a href="/">REJOUEZ</a></li>
-                <li><a href="/hallOfFame">HALL OF FAME</a></li>
+            <ul className="niv-ul">
+                <li className="niv-li"><a className="link"href="/">REJOUEZ</a></li>
+                <li className="niv-li"><a className="link"href="/hallOfFame">HALL OF FAME</a></li>
             </ul>
-        </div>
+        </>
     );
 };
 
