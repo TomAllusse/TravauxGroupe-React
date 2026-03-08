@@ -12,17 +12,17 @@ Actuellement, deux plugins officiels sont disponibles :
 
 Le Compilateur React n'est pas activé sur ce template en raison de son impact sur les performances de développement et de build. Pour l'ajouter, consultez [cette documentation](https://react.dev/learn/react-compiler/installation).
 
-## <div align="center"> <h1>TravauxGroupe - React</h1></div> 
-<div align="center"> 
+## <div align="center"> <h1>TravauxGroupe - React</h1></div>
+<div align="center">
   <p><i>Installation du projet</i></p>
 
-  <h2>Première étape</h2>
+  <h6>Première étape</h6>
   <p>Créez un dossier où vous allez cloner ce dépôt</p>
 
-  <h2>Deuxième étape</h2>
+  <h6>Deuxième étape</h6>
   <p>Installation de [git](https://git-scm.com/install/)</p>
 
-  <h2>Troisième étape</h2>
+  <h6>Troisième étape</h6>
   <p>Clonage du dépôt : </p>
 </div>
 
@@ -30,10 +30,10 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
     git clone https://github.com/TomAllusse/TravauxGroupe-React.git
   ```
 <div align="center">
-  <h2>Quatrième étape</h2>
+  <h6>Quatrième étape</h6>
   <p>Installation de [node.js®](https://nodejs.org/fr/download)</p>
 
-  <h2>Cinquième étape</h2>
+  <h6>Cinquième étape</h6>
   <p>Dirigez-vous dans le dépôt installé avec votre invite de commandes.</p>
   <p>Puis effectuez cette commande :</p>
 </div>
@@ -58,7 +58,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 <div align="center">
     <p><i>Qui a fait quoi dans le projet</i></p>
 </div>
-
+<div align="center">
 | Contributeur | Rôle / Tâche | Statut |
 | :--- | :--- | :---: |
 | Tom | Page Quizz | ✅ Terminé |
@@ -72,4 +72,5 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 | Amiels | Page Theme | ✅ Terminé |
 | Amiels | Page HallOfTab | ✅ Terminé |
 | Tom / Amiels | Ajout du context sur toutes les pages | ✅ Terminé |
+</div>
 
