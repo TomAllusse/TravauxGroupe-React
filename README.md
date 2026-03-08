@@ -21,9 +21,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 
   <h6>Deuxième étape</h6>
 </div>
-<p align="center">
-  Installation de <a href="https://git-scm.com/install/">git</a>.
-</p>
+<p align="center">Installation de <a href="https://git-scm.com/install/">git</a></p>
 
 <div align="center">
   <h6>Troisième étape</h6>
@@ -35,7 +33,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
   ```
 <div align="center">
   <h6>Quatrième étape</h6>
-  <p>Installation de [node.js®](https://nodejs.org/fr/download)</p>
+  <p>Installation de <a href="https://nodejs.org/fr/download">node.js®</a></p>
 
   <h6>Cinquième étape</h6>
   <p>Dirigez-vous dans le dépôt installé avec votre invite de commandes.</p>
@@ -55,7 +53,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 <div align="center">
     <p><i>Ceci doit apparaître</i></p>
     <img width="305" height="174" alt="image" src="https://github.com/user-attachments/assets/ab4846a0-3811-4b8c-bc79-274c64f82f6e" />
-    <p>Cliquez sur le [lien](http://localhost:5173/) qui affichera la page d'accueil du quiz </p>
+    <p>Cliquez sur le <a href="http://localhost:5173/">lien</a> qui affichera la page d'accueil du quiz </p>
     <p>Maintenant, vous pouvez vous amuser !</p>
 </div>
 
@@ -66,7 +64,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 </div>
 
 <div align="center">
-  
+
 | Contributeur | Rôle / Tâche | Statut |
 | :--- | :--- | :---: |
 | Tom | Page Quizz | ✅ Terminé |
