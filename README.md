@@ -23,15 +23,15 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
   <p><i>Qui a fait quoi dans le projet</i></p>
 </div>
 
-| Contributeur | Rôle / Tâche | Outils & technos | Statut |
+| Contributeur | Rôle / Tâche | Statut |
 | :--- | :--- | :--- | :---: |
-| Tom | Page QUIZZ | ✅ |
-| Tom | CSS | ✅ |
-| Tom | Page Index | ✅ |
-| Tom | Page Menu | ✅ |
-| Tom | Page Error404 | ✅ |
-| Tom | Page Header | ✅ |
-| Amiels | Page Context | ✅ |
-| Amiels | Page Theme | ✅ |
-| Amiels | Page HallOfTab | ✅ |
-| Tom / Amiels | Ajout du context sur tous les pages | ✅ |
+| Tom | Page QUIZZ | ✅ Terminés |
+| Tom | CSS | ✅ Terminés |
+| Tom | Page Index | ✅ Terminés |
+| Tom | Page Menu | ✅ Terminés |
+| Tom | Page Error404 | ✅ Terminés |
+| Tom | Page Header | ✅ Terminés |
+| Amiels | Page Context | ✅ Terminés |
+| Amiels | Page Theme | ✅ Terminés |
+| Amiels | Page HallOfTab | ✅ Terminés |
+| Tom / Amiels | Ajout du context sur tous les pages | ✅ Terminés |
