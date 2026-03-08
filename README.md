@@ -1,4 +1,4 @@
-<div align="center"> <h1>React + Vite</h1></div>
+#<div align="center"> <h1>React + Vite</h1></div>
 
 Ce template propose une configuration minimale pour faire fonctionner React dans Vite avec le HMR (Hot Module Replacement) et quelques règles ESLint.
 
@@ -8,11 +8,11 @@ Actuellement, deux plugins officiels sont disponibles :
 
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) utilise [SWC](https://swc.rs/) pour le Fast Refresh.
 
-<div align="center"> <h1>Compilateur React</h1></div>
+#<div align="center"> <h1>Compilateur React</h1></div>
 
 Le Compilateur React n'est pas activé sur ce template en raison de son impact sur les performances de développement et de build. Pour l'ajouter, consultez [cette documentation](https://react.dev/learn/react-compiler/installation).
 
-<div align="center"> <h1>TravauxGroupe - React</h1>
+#<div align="center"> <h1>TravauxGroupe - React</h1>
   <p><i>Installation du projet</i></p>
 
   <h2>Première étape</h2>
@@ -41,9 +41,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
   npm install
 ```
 
-<div align="center">
-    <h1>Lancement du projet</h1>
-</div>
+#<div align="center"><h1>Lancement du projet</h1></div>
 
 ```bash
   npm run dev
@@ -55,8 +53,8 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
     <p>Cliquez sur le [lien](http://localhost:5173/) qui affichera la page d'accueil du quiz </p>
     <p>Maintenant, vous pouvez vous amuser !</p>
 </div>
+#<div align="center"><h1>📋 Répartition des Missions 📋</h1></div>
 <div align="center">
-    <h1>📋 Répartition des Missions 📋</h1>
     <p><i>Qui a fait quoi dans le projet</i></p>
 
     | Contributeur | Rôle / Tâche | Statut |
