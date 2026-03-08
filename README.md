@@ -21,7 +21,6 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 <div align="center">
   <h1>📋 Répartition des Missions 📋</h1>
   <p><i>Qui a fait quoi dans le projet</i></p>
-</div>
 
 | Contributeur | Rôle / Tâche | Statut |
 | :--- | :--- | :---: |
@@ -35,3 +34,4 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 | Amiels | Page Theme | ✅ Terminés |
 | Amiels | Page HallOfTab | ✅ Terminés |
 | Tom / Amiels | Ajout du context sur tous les pages | ✅ Terminés |
+</div>
