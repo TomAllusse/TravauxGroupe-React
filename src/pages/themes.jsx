@@ -49,7 +49,7 @@ const Themes = () => {
         console.log("ID sélectionné :", value);
     };
 
-    if (loading) return <p>Préparation des thèmes ...</p>;
+    if (loading) return <p id="loading-themes">Préparation des thèmes ...</p>;
 
     return (
         <>

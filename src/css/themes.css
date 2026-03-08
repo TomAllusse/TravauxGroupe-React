@@ -39,3 +39,14 @@
     background: #000;
     border-radius: 15px;
 }
+
+#loading-themes {
+    color: #00c4cc;
+    margin: auto;
+    height: -webkit-fill-available;
+    font-weight: 500;
+    align-items: center;
+    align-content: center;
+    display: block;
+    font-size: 2.5em;
+}

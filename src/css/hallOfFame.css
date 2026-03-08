@@ -1,0 +1,90 @@
+.result-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    height: 700px;
+}
+
+.classement-container{
+    display: grid;
+    width: -webkit-fill-available;
+    margin-bottom: 15px;
+    height: 700px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color:  #000;
+    font-weight: bolder;
+    background: #000;
+    border-radius: 10px;
+}
+
+.niv-container {
+    margin: auto;
+    text-align: left;
+    padding: 15px;
+}
+
+.niv-container .titleSecond {
+    margin-top: 0;
+    padding: 15px;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #00c4cc;
+}
+
+.gold {
+    color: gold;
+}
+
+.argent {
+    color: silver;
+}
+
+.bronze {
+    color: #b78608;
+}
+
+.outsiders {
+    color: #933232;
+}
+
+.members-container {
+    width: 300px;
+    display: flex;
+}
+
+.nameClassement {
+    width: 75%;
+}
+
+.affichage-score {
+    width: 25%;
+    text-align: right;
+}
+
+.message {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2em;
+    color: #00c4cc;
+}
+
+.btn-index{
+    display: block !important;
+    width: 300px;
+    min-height: 50px;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-size: 1em;
+    color: #00c4cc;
+    border: 3px solid #000;
+    border-radius: 15px;
+    background: #000;
+}
+
+.btn-index:hover {
+    color: #00c4cc;
+    background: #edf0f2;
+    border-color: #00c4cc;
+}

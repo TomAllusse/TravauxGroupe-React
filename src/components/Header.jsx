@@ -11,6 +11,10 @@ const Header = () => {
       pathname: "/",
       text: "Accueil",
     },
+    {
+      pathname: "/hallOfFame",
+      text: "Classement",
+    }
   ];
 
   return (

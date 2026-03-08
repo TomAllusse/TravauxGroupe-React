@@ -1,58 +1,42 @@
-import {   useState } from "react";
-import { QuizzContext } from "../contexts/QuizzContextProvider";
-
-
-
-
-
-
-
-
-
+import { useContext } from "react";
+import { QuizzContext } from "../contexts/QuizzContext";
+import '../css/hallOfFame.css';
 
 const HallOfFameTab = () => {
-    const [scores, setscores] = useState([]);
-
-
-
-    useState(() => {
-        const data = localStorage.getItem("hallOfFame");
-        if (data){
-            const scoresNettoyes =JSON.parse(data);
-            setscores(scoresNettoyes);
-        }
-    }, []);
+    const { scores } = useContext(QuizzContext);
+    const niveaux = ["easy", "medium", "hard"];
 
     return (
-        <div className="result">
-            <h1 className="titleIndex"> Meilleurs Scores  </h1>
+        <div className="result-score">
+            <div className="classement-container">
+                {niveaux.map((niv) => {
+                    const scoresFiltres = scores.filter(s => s.niveau === niv);
 
-                <div className="team">
-                    {scores.length > 0 ? (
-                        scores.map((joueur, index) => (
+                    return (
+                        <div className="niv-container" key={niv}>
+                            <h2 className="titleSecond">{niv}</h2>
 
-                            <div key={joueur.id} className="members-container">
-                                <p>
-                                    <strong>#{index + 1}</strong> - {joueur.nom} :
-                                    <span> {joueur.score} / 10</span>
-                                </p>
-                            </div>
-                        ))
-                    ) : (
-                        <p>Aucun score enregistré pour le moment.</p>
-                    )}
-                </div>
-
-            <button onClick={() => window.location.href = "/"}>Retour à l'accueil</button>
+                            {scoresFiltres.length > 0 ? (
+                                scoresFiltres.map((joueur, index) => (
+                                    <div key={`${joueur.id}-${index}`}>
+                                        <div className={`members-container ${index === 0 ? "gold" : index === 1 ? "argent" : index === 2 ? "bronze" : "outsiders"}`}>
+                                            <p className="nameClassement">
+                                                <strong>{index + 1}</strong> &#x2003;&#x2794;&#x2003;{joueur.nom}
+                                            </p>
+                                            <p className="affichage-score">{joueur.score} / 10</p>
+                                        </div>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="message">Aucun score enregistré.</p>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+            <button onClick={() => window.location.href = "/"} className="btn-index">ACCUEIL</button>
         </div>
     );
 };
 
-
-
-
-
-
-
-
-export default HallOfFameTab; sauvegardeScore;
+export default HallOfFameTab;

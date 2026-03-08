@@ -42,3 +42,10 @@
   border-style: solid;
   border-color: #00c4cc;
 }
+
+.menu {
+  width: -webkit-fill-available;
+  height: 700px;
+  margin: auto;
+  align-content: center;
+}
