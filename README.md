@@ -56,18 +56,18 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 ## <div align="center"><h1>📋 Répartition des Missions 📋</h1></div>
 <div align="center">
     <p><i>Qui a fait quoi dans le projet</i></p>
-
-    | Contributeur | Rôle / Tâche | Statut |
-    | :--- | :--- | :---: |
-    | Tom | Page Quizz | ✅ Terminé |
-    | Tom | Page Index | ✅ Terminé |
-    | Tom | Page Menu | ✅ Terminé |
-    | Tom | Page Error404 | ✅ Terminé |
-    | Tom | Page Header | ✅ Terminé |
-    | Tom | CSS | ✅ Terminé |
-    | Tom | README | ✅ Terminé |
-    | Amiels | Page Context | ✅ Terminé |
-    | Amiels | Page Theme | ✅ Terminé |
-    | Amiels | Page HallOfTab | ✅ Terminé |
-    | Tom / Amiels | Ajout du context sur toutes les pages | ✅ Terminé |
 </div>
+| Contributeur | Rôle / Tâche | Statut |
+| :--- | :--- | :---: |
+| Tom | Page Quizz | ✅ Terminé |
+| Tom | Page Index | ✅ Terminé |
+| Tom | Page Menu | ✅ Terminé |
+| Tom | Page Error404 | ✅ Terminé |
+| Tom | Page Header | ✅ Terminé |
+| Tom | CSS | ✅ Terminé |
+| Tom | README | ✅ Terminé |
+| Amiels | Page Context | ✅ Terminé |
+| Amiels | Page Theme | ✅ Terminé |
+| Amiels | Page HallOfTab | ✅ Terminé |
+| Tom / Amiels | Ajout du context sur toutes les pages | ✅ Terminé |
+
