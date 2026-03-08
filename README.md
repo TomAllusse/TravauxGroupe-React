@@ -8,7 +8,7 @@ Actuellement, deux plugins officiels sont disponibles :
 
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) utilise [SWC](https://swc.rs/) pour le Fast Refresh.
 
-#<div align="center"> <h1>Compilateur React</h1></div>
+##<div align="center"> <h1>Compilateur React</h1></div>
 
 Le Compilateur React n'est pas activé sur ce template en raison de son impact sur les performances de développement et de build. Pour l'ajouter, consultez [cette documentation](https://react.dev/learn/react-compiler/installation).
 
