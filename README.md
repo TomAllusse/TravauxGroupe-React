@@ -21,7 +21,12 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 
   <h6>Deuxième étape</h6>
 </div>
-<p  align="center">Installation de </p>[git](https://git-scm.com/install/)
+<p  align="center">Installation de 
+  
+  [git](https://git-scm.com/install/).
+
+</p>
+
 <div align="center">
   <h6>Troisième étape</h6>
   <p>Clonage du dépôt : </p>
