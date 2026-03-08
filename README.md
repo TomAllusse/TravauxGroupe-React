@@ -19,6 +19,19 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 ```
 
 <div align="center">
-  <h1>👥 Répartition des Missions</h1>
+  <h1>📋 Répartition des Missions 📋</h1>
   <p><i>Qui a fait quoi dans le projet</i></p>
 </div>
+
+| Contributeur | Rôle / Tâche | Outils & technos | Statut |
+| :--- | :--- | :--- | :---: |
+| Tom | Page QUIZZ | ✅ |
+| Tom | CSS | ✅ |
+| Tom | Page Index | ✅ |
+| Tom | Page Menu | ✅ |
+| Tom | Page Error404 | ✅ |
+| Tom | Page Header | ✅ |
+| Amiels | Page Context | ✅ |
+| Amiels | Page Theme | ✅ |
+| Amiels | Page HallOfTab | ✅ |
+| Tom / Amiels | Ajout du context sur tous les pages | ✅ |
