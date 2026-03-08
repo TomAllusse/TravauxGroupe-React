@@ -18,4 +18,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 
 ```
 
-
+<div align="center">
+  <h1>👥 Répartition des Missions</h1>
+  <p><i>Qui a fait quoi dans le projet</i></p>
+</div>
