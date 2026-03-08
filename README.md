@@ -1,4 +1,4 @@
-#<div align="center"> <h1>React + Vite</h1></div>
+## <div align="center"> <h1>React + Vite</h1></div>
 
 Ce template propose une configuration minimale pour faire fonctionner React dans Vite avec le HMR (Hot Module Replacement) et quelques règles ESLint.
 
