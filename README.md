@@ -24,7 +24,7 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 </div>
 
 | Contributeur | Rôle / Tâche | Statut |
-| :--- | :--- | :--- | :---: |
+| :--- | :--- | :---: |
 | Tom | Page QUIZZ | ✅ Terminés |
 | Tom | CSS | ✅ Terminés |
 | Tom | Page Index | ✅ Terminés |
