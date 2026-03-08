@@ -54,11 +54,15 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
     <p>Cliquez sur le [lien](http://localhost:5173/) qui affichera la page d'accueil du quiz </p>
     <p>Maintenant, vous pouvez vous amuser !</p>
 </div>
+
 ## <div align="center"><h1>📋 Répartition des Missions 📋</h1></div>
+
 <div align="center">
     <p><i>Qui a fait quoi dans le projet</i></p>
 </div>
+
 <div align="center">
+  
 | Contributeur | Rôle / Tâche | Statut |
 | :--- | :--- | :---: |
 | Tom | Page Quizz | ✅ Terminé |
@@ -72,5 +76,6 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
 | Amiels | Page Theme | ✅ Terminé |
 | Amiels | Page HallOfTab | ✅ Terminé |
 | Tom / Amiels | Ajout du context sur toutes les pages | ✅ Terminé |
+
 </div>
 
