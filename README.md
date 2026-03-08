@@ -20,8 +20,8 @@ Le Compilateur React n'est pas activé sur ce template en raison de son impact s
   <p>Créez un dossier où vous allez cloner ce dépôt</p>
 
   <h6>Deuxième étape</h6>
-  <p>Installation de </p>[git](https://git-scm.com/install/)
 </div>
+<p  align="center">Installation de </p>[git](https://git-scm.com/install/)
 <div align="center">
   <h6>Troisième étape</h6>
   <p>Clonage du dépôt : </p>
